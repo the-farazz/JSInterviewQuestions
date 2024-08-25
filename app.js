@@ -235,8 +235,9 @@ for (let i = 0; i < arr.length; i++) {
         endingIndex = midIndex;
         midIndex = startingIndex / endingIndex;
     }
-    else{
-    console.log("Value not found!");
-    
+    else {
+        console.log("Value not found!");
+
     }
-}
+};
+
