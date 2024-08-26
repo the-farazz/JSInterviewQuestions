@@ -211,33 +211,40 @@
 
 // ------------Q6 Binnary Search------------------
 
-// let arr = [2, 6, 9, 3, 8, 5, 1];
 
-let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-let toFind = 7;
+let arr = [5, 1, 3, 2, 4,6,7,9,8,9];
+let toFind = 9;
 arr.sort();
 
-let totalLength = arr.length;
-let midIndex = (totalLength - 1) / 2;
-let startingIndex = 0;
-let endingIndex = totalLength - 1;
+function binarySearch(arr,toFind) {
 
-for (let i = 0; i < arr.length; i++) {
-    if (arr[midIndex] == toFind) {
-        console.log(`"${toFind}" found at index ${i}`);
-    }
-    else if (arr[midIndex] < toFind) {
-        startingIndex = midIndex;
-        midIndex = startingIndex / endingIndex;
+    let totalLength = arr.length;
+    let startingIndex = 0;
+    let endingIndex = totalLength - 1;
 
-    }
-    else if (arr[midIndex] > toFind) {
-        endingIndex = midIndex;
-        midIndex = startingIndex / endingIndex;
-    }
-    else {
-        console.log("Value not found!");
+    let flag = false;
 
-    }
-};
+    while (startingIndex <= endingIndex) {
+        midIndex = Math.floor((startingIndex + endingIndex) / 2);
 
+        if (arr[midIndex] == toFind) {
+            console.log(`${toFind} found at index ${midIndex}.`);
+            flag = true;
+            return;
+        }
+        else if (arr[midIndex] < toFind) {
+            startingIndex = midIndex + 1;
+
+        }
+        else if (arr[midIndex] > toFind) {
+            endingIndex = midIndex - 1;
+
+        }
+    };
+    if (!flag) {
+
+        console.log(`"${toFind}" not found!`);
+    }
+}
+
+binarySearch(arr,toFind);
