@@ -70,7 +70,6 @@
 //                     ↳ 2 * factorialRecursive(1)
 //                           ↳ 1 (base case)
 
-
 // function factorial(n){
 //   if(n<0){
 //     return "Factorial is not definend for negative integers."
@@ -100,7 +99,6 @@
 // // Example usage:
 // console.log(fibonacci(3));  // Output: 5
 // console.log(fibonacci(7));  // Output: 13
-
 
 // -----------------Q4 Write a program to note the character count--------------
 
@@ -141,13 +139,11 @@
 
 // ---------------Q4 Write a function to find the power of any given number------------------
 
-
 // let number = 5;
 // let power = 3;
 
 // let output = Math.pow(number, power);
 // console.log(output);
-
 
 // ------------------For Loop------------------
 
@@ -211,41 +207,122 @@
 
 // ------------Q6 Binnary Search------------------
 
+let arr = [5, 1, 3, 2, 4,6,7,9,8,9];
+let toFind = 19;
+arr.sort();
 
-// let arr = [5, 1, 3, 2, 4,6,7,9,8,9];
-// let toFind = 9;
+function binarySearch(arr,toFind) {
+
+    let totalLength = arr.length;
+    let startingIndex = 0;
+    let endingIndex = totalLength - 1;
+
+    let flag = false;
+
+    while (startingIndex <= endingIndex) {
+        midIndex = Math.floor((startingIndex + endingIndex) / 2);
+
+        if (arr[midIndex] == toFind) {
+            console.log(`${toFind} found at index ${midIndex}.`);
+            flag = true;
+            return;
+        }
+        else if (arr[midIndex] < toFind) {
+
+            startingIndex = midIndex + 1;
+
+        }
+        else if (arr[midIndex] > toFind) {
+            endingIndex = midIndex - 1;
+
+        }
+    };
+    if (!flag) {
+
+        console.log(`"${toFind}" not found!`);
+    }
+}
+
+binarySearch(arr,toFind);
+
+// ------------Q7 Binnary Search------------------
+
+// let arr = [5, 1, 3, 2, 4, 6, 7, 9, 8, 9];
+// let toFind = 51;
 // arr.sort();
 
-// function binarySearch(arr,toFind) {
+// function binarySearch(
+//   arr,
+//   toFind,
+//   startingIndex = 0,
+//   endingIndex = arr.length - 1
+// ) {
+//   if (startingIndex > endingIndex) {
+//     console.log(`"${toFind}" not found!`);
+//     return;
+//   }
 
-//     let totalLength = arr.length;
-//     let startingIndex = 0;
-//     let endingIndex = totalLength - 1;
+//   let midIndex = Math.floor((startingIndex + endingIndex) / 2);
 
-//     let flag = false;
-
-//     while (startingIndex <= endingIndex) {
-//         midIndex = Math.floor((startingIndex + endingIndex) / 2);
-
-//         if (arr[midIndex] == toFind) {
-//             console.log(`${toFind} found at index ${midIndex}.`);
-//             flag = true;
-//             return;
-//         }
-//         else if (arr[midIndex] < toFind) {
-
-//             startingIndex = midIndex + 1;
-
-//         }
-//         else if (arr[midIndex] > toFind) {
-//             endingIndex = midIndex - 1;
-
-//         }
-//     };
-//     if (!flag) {
-
-//         console.log(`"${toFind}" not found!`);
-//     }
+//   if (arr[midIndex] === toFind) {
+//     console.log(`${toFind} found at index ${midIndex}.`);
+//     return;
+//   } else if (arr[midIndex] < toFind) {
+//     binarySearch(arr, toFind, midIndex + 1, endingIndex);
+//   } else {
+//     binarySearch(arr, toFind, startingIndex, midIndex - 1);
+//   }
 // }
 
-// binarySearch(arr,toFind);
+// binarySearch(arr, toFind);
+
+// ---------------What if I log function?----------------------------
+
+// The function runs, executes all its statements, and stops when it hits a return; statement
+
+// If the function has console.log() statements, they will print directly to the console during the execution of the function. However, if the function returns a value, it is ignored unless specifically captured or used elsewhere.
+
+// Since no value is stored, you do not get any extra output beyond what the function itself logs.
+
+// If the function has a return; statement without a value, it returns undefined, which gets printed if you log it
+
+// let array = [1, 2, 3, 4, 5];
+
+// array.sort();
+
+// function binarySearch(array, find) {
+//   let startingIndex = 0;
+//   let endingIndex = array.length - 1;
+//   while (startingIndex <= endingIndex) {
+//     let middleIndex = Math.floor((startingIndex + endingIndex) / 2);
+
+//     if (find == array[middleIndex]) {
+//       console.log(`"${find} found at index ${middleIndex}!"`);
+//       return middleIndex;
+//     } else if (find < array[middleIndex]) {
+//       endingIndex = middleIndex - 1;
+//     } else if (find > array[middleIndex]) {
+//       startingIndex = middleIndex + 1;
+//     }
+//   }
+//   console.log(`"${find} not found!"`);
+//   return -1;
+// }
+// let output = binarySearch(array, 20);
+// console.log(output);
+
+// ------------Q8 Diamond Problem------------------
+
+// for (let i = 1; i < 20; i++) {
+//   for (let j = 0; j < i; j++) {
+//     document.write("*");
+//   }
+//   document.write("<br>");
+// }
+
+// for (let i = 20; i > 0; i--) {
+//   for (let j = 0; j < i; j++) {
+//     document.write("*");
+//   }
+//   document.write("<br>");
+// }
