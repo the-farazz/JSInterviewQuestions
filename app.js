@@ -207,43 +207,36 @@
 
 // ------------Q6 Binnary Search------------------
 
-let arr = [5, 1, 3, 2, 4,6,7,9,8,9];
+let arr = [5, 1, 3, 2, 4, 6, 7, 9, 8, 9];
 let toFind = 19;
 arr.sort();
 
-function binarySearch(arr,toFind) {
+function binarySearch(arr, toFind) {
+  let totalLength = arr.length;
+  let startingIndex = 0;
+  let endingIndex = totalLength - 1;
 
-    let totalLength = arr.length;
-    let startingIndex = 0;
-    let endingIndex = totalLength - 1;
+  let flag = false;
 
-    let flag = false;
+  while (startingIndex <= endingIndex) {
+    midIndex = Math.floor((startingIndex + endingIndex) / 2);
 
-    while (startingIndex <= endingIndex) {
-        midIndex = Math.floor((startingIndex + endingIndex) / 2);
-
-        if (arr[midIndex] == toFind) {
-            console.log(`${toFind} found at index ${midIndex}.`);
-            flag = true;
-            return;
-        }
-        else if (arr[midIndex] < toFind) {
-
-            startingIndex = midIndex + 1;
-
-        }
-        else if (arr[midIndex] > toFind) {
-            endingIndex = midIndex - 1;
-
-        }
-    };
-    if (!flag) {
-
-        console.log(`"${toFind}" not found!`);
+    if (arr[midIndex] == toFind) {
+      console.log(`${toFind} found at index ${midIndex}.`);
+      flag = true;
+      return;
+    } else if (arr[midIndex] < toFind) {
+      startingIndex = midIndex + 1;
+    } else if (arr[midIndex] > toFind) {
+      endingIndex = midIndex - 1;
     }
+  }
+  if (!flag) {
+    console.log(`"${toFind}" not found!`);
+  }
 }
 
-binarySearch(arr,toFind);
+binarySearch(arr, toFind);
 
 // ------------Q7 Binnary Search------------------
 
@@ -310,6 +303,38 @@ binarySearch(arr,toFind);
 // }
 // let output = binarySearch(array, 20);
 // console.log(output);
+
+// ------------Q8 Diamond Problem------------------
+
+// for (let i = 1; i < 20; i++) {
+//   for (let j = 0; j < i; j++) {
+//     document.write("*");
+//   }
+//   document.write("<br>");
+// }
+
+// for (let i = 20; i > 0; i--) {
+//   for (let j = 0; j < i; j++) {
+//     document.write("*");
+//   }
+//   document.write("<br>");
+// }
+
+// ------------Q8 Diamond Problem------------------
+
+// for (let i = 1; i < 20; i++) {
+//   for (let j = 0; j < i; j++) {
+//     document.write("*");
+//   }
+//   document.write("<br>");
+// }
+
+// for (let i = 20; i > 0; i--) {
+//   for (let j = 0; j < i; j++) {
+//     document.write("*");
+//   }
+//   document.write("<br>");
+// }
 
 // ------------Q8 Diamond Problem------------------
 
