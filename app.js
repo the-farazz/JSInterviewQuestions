@@ -306,25 +306,116 @@ binarySearch(arr, toFind);
 
 // ------------Q8 Diamond Problem-------------
 
-// for (let i = 1; i < 20; i++) {
+// for (let i = 1; i < 10; i++) {
+//   for (let j = 0; j < i; j++) {
+//     document.write("*");
+//   }
+//   document.write("<br>");
+// }
+// ---------------------
+// *
+// **
+// ***
+// ****
+// *****
+// ******
+// *******
+// ********
+// *********
+// ------------Q9 Diamond Problem-------------
+
+// for (let i = 1; i < 10; i++) {
 //   for (let j = 0; j < i; j++) {
 //     document.write("*");
 //   }
 //   document.write("<br>");
 // }
 
-// for (let i = 20; i > 0; i--) {
+// for (let i = 10; i > 0; i--) {
 //   for (let j = 0; j < i; j++) {
 //     document.write("*");
 //   }
 //   document.write("<br>");
 // }
+// ------------------------
+// *
+// **
+// ***
+// ****
+// *****
+// ******
+// *******
+// ********
+// *********
+// **********
+// *********
+// ********
+// *******
+// ******
+// *****
+// ****
+// ***
+// **
+// *
 
-// ------------Q9 Staire Case-----------------
+// ------------Q10 Staire Case--------------
 
-for (let i = 0; i < 10; i++) {
-  for (let j = 0; j < i; j++) {
-    document.write(i);
-  }
-  document.write("<br>");
-}
+// for (let i = 1; i < 10; i++) {
+//   for (let j = 1; j <= i; j++) {
+//     document.write(i);
+//   }
+//   document.write("<br>");
+// }
+
+// ----------------
+// 1
+// 22
+// 333
+// 4444
+// 55555
+// 666666
+// 7777777
+// 88888888
+// 999999999
+
+// ------------Q11 Staire Case--------------
+
+// let num = 1;
+// for (let i = 1; i <= 4; i++) {
+//   for (let j = 1; j <= i; j++) {
+//     document.write(num++);
+//   }
+//   document.write("<br>");
+// }
+//   -----------------
+// 1
+// 23
+// 456
+// 78910
+
+// ------------Q12 Staire Case--------------
+
+// for (i = 1; i < 10; i++) {
+//   for (let j = 1; j <= i; j++) {
+//     document.write(j);
+//   }
+//   document.write("<br>");
+// }
+
+// -----------------------
+
+// 1
+// 12
+// 123
+// 1234
+// 12345
+// 123456
+// 1234567
+// 12345678
+// 123456789
+
+// ------------Q13 Code to reverse a string--------------
+
+let string = "faraz";
+let reverseString = string.reverse();
+console.log(reverseString);
