@@ -1030,3 +1030,39 @@
 // // Example: Find the frequency of all characters in "banana"
 // const str = "banana";
 // console.log(charFrequencyAll(str));
+
+// function charFrequencyAll(str) {
+//   let frequency = {};
+
+//   for (let char of str) {
+//     if (frequency[char]) {
+//       frequency[char]++;
+//     } else {
+//       frequency[char] = 1;
+//     }
+//   }
+
+//   return frequency;
+// }
+
+// // Example: Find the frequency of all characters in "banana"
+// const str = "banana";
+// console.log(charFrequencyAll(str));
+
+// function charFrequencyAll(str) {
+//   let frequency = {};
+
+//   for (let char of str) {
+//     if (frequency[char]) {
+//       frequency[char]++;
+//     } else {
+//       frequency[char] = 1;
+//     }
+//   }
+
+//   return frequency;
+// }
+
+// // Example: Find the frequency of all characters in "banana"
+// const str = "banana";
+// console.log(charFrequencyAll(str));
