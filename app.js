@@ -1066,3 +1066,35 @@
 // // Example: Find the frequency of all characters in "banana"
 // const str = "banana";
 // console.log(charFrequencyAll(str));
+
+// ----------Program to find palindrom-------
+
+// Manual Two-Pointer Approach
+
+// function isPalindrome(str) {
+//   let left = 0;
+//   let right = str.length - 1;
+//   while (left < right) {
+//     if (str[left] !== str[right]) {
+//       return false;
+//     } else {
+//       left++;
+//       right--;
+//     }
+//   }
+//   return true;
+// }
+
+// console.log(isPalindrome("wow"));
+
+// ----------OR-------
+
+// function isPalindrome(str) {
+//   return str === str.split("").reverse().join("");
+// }
+
+// console.log(isPalindrome("madam"));
+
+
+
+
