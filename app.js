@@ -1096,5 +1096,22 @@
 // console.log(isPalindrome("madam"));
 
 
+// ----------OR-------
+
+// function isPalindrome(str) {
+//   return str === str.split("").reverse().join("");
+// }
+
+// console.log(isPalindrome("madam"));
+
+// ----------OR-------
+
+// function isPalindrome(str) {
+//   return str === str.split("").reverse().join("");
+// }
+
+// console.log(isPalindrome("madam"));
+
+
 
 
