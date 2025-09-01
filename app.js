@@ -1096,28 +1096,32 @@
 // console.log(isPalindrome("madam"));
 
 
-// ----------OR-------
+// let arr = [5, 1, 3, 2, 4, 6, 7, 9, 8, 9];
+// let toFind = 51;
+// arr.sort();
 
-// function isPalindrome(str) {
-//   return str === str.split("").reverse().join("");
+// function binarySearch(
+//   arr,
+//   toFind,
+//   startingIndex = 0,
+//   endingIndex = arr.length - 1
+// ) {
+//   if (startingIndex > endingIndex) {
+//     console.log(`"${toFind}" not found!`);
+//     return;
+//   }
+
+//   let midIndex = Math.floor((startingIndex + endingIndex) / 2);
+
+//   if (arr[midIndex] === toFind) {
+//     console.log(`${toFind} found at index ${midIndex}.`);
+//     return;
+//   } else if (arr[midIndex] < toFind) {
+//     binarySearch(arr, toFind, midIndex + 1, endingIndex);
+//   } else {
+//     binarySearch(arr, toFind, startingIndex, midIndex - 1);
+//   }
 // }
 
-// console.log(isPalindrome("madam"));
-
-// ----------OR-------
-
-// function isPalindrome(str) {
-//   return str === str.split("").reverse().join("");
-// }
-
-// console.log(isPalindrome("madam"));
-
-// function isPalindrome(str) {
-//   return str === str.split("").reverse().join("");
-// }
-
-// console.log(isPalindrome("madam"));
-
-
-
+// binarySearch(arr, toFind);
 
