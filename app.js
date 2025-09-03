@@ -147,7 +147,7 @@
 //         return n;
 //     }
 
-//     // Recursive case: Calculate the sum of the two previous Fibonacci numbers
+//     // Recursive case: Calculate the sum of the two previous Ficxbonacci numbers
 
 //     return fibonacci(n - 1) + fibonacci(n - 2);
 // }
@@ -173,6 +173,7 @@
 // }
 
 // -----------------Q4 Write a program to note the character count--------------
+// ----------Naive Approach----------
 
 // let string = "Faraz";
 
@@ -209,6 +210,66 @@
 //     }
 // }
 
+// --------------for of Loop--------
+
+// for...of loop
+// Iterates over values (the actual characters in a string or elements in an array).
+// Perfect when you just want each character directly.
+
+// let string = 'farazAlam';
+// for( let char of string){
+//     console.log(char); // prints each character
+// }
+
+// --------------for in Loop--------
+
+// for...in loop
+// Iterates over keys/indexes, not values.
+// Commonly used for objects to loop through property names.
+// If used on a string or array, it gives indexes, not the actual characters.
+
+// let string = 'farazAlam';
+// for (let ind in string){
+//     console.log(ind, string[ind]);
+// }
+
+// -------------Practical approach----------------
+
+// function charCount(string) {
+//   count = {};
+//   for (let char of string) {
+//     if (count[char] == undefined) {
+//       count[char] = 1;
+//     } else {
+//       count[char] = count[char] + 1;
+//     }
+//   }
+//  return count;
+// }
+
+// let result = charCount("farazalam");
+// console.log(result);
+
+// for (ind in result) {
+//   console.log(`${ind} : ${result[ind]}`);
+// }
+
+// -----------Best Approach---------
+
+// function charCount(string){
+//     let count = {};
+//     for(let char of string){
+//       count[char] = (count[char]||0) +1;
+//     }
+//     return count;
+// }
+
+// let result = charCount('farazalam');
+
+// for(ind in result){
+//     console.log(result[ind] +':'+ ind )
+// }
+
 // ---------------Q4 Write a function to find the power of any given number------------------
 
 // let number = 5;
@@ -219,13 +280,13 @@
 
 // ------------------For Loop------------------
 
-// let number = 50;
-// let power = 2;
+// let number = 5;
+// let power = 3;
 
-// let output;
+// let output =1;
 
 // for (let i =0;i < power; i ++){
-//     output = number * number;
+//     output = output * number;
 // }
 
 // console.log(output);
@@ -345,7 +406,8 @@
 
 // The function runs, executes all its statements, and stops when it hits a return; statement
 
-// If the function has console.log() statements, they will print directly to the console during the execution of the function. However, if the function returns a value, it is ignored unless specifically captured or used elsewhere.
+// If the function has console.log() statements, they will print directly to the console during the execution of the function. However, if the function returns a value,
+//  it is ignored unless specifically captured or used elsewhere.
 
 // Since no value is stored, you do not get any extra output beyond what the function itself logs.
 
@@ -560,53 +622,21 @@
 
 // ----------------Without If else------------
 
-// function isEven(num) {}
-
-// var faraz = {
-//   canMakeWebs: true,
-//   aGymer: true,
-//   smoke: false,
-// };
-
-// for (let key in faraz) {
-//   console.log(key, faraz[key]);
+// function oddEven(num) {
+//   console.log(num % 2 === 0 ? "Number is Even." : "Number is Odd.");
 // }
 
-// setTimeout(function () {
-//   console.log("Hello World!");
-// }, 2000);
+// oddEven(3);
+// oddEven(4);
 
-// var arr = [1, 2, 3, 4, 5, 6];
+// function oddEven(num) {
+//   console.log(["Number is Even.", "Number is Odd."][num % 2]);
+// }
 
-// let newArr = arr.map((val) => {
-//   return val * 2;
-// });
+// oddEven(3);
+// oddEven(4);
 
-// console.log(newArr);
-
-// var arr = [1, 2, 3, 4, 5, 6];
-
-// let newArr = arr.forEach((val) => {
-//   console.log(val * 2);
-// });
-
-// var arr = [1, 2, 3, 4, 5, 6];
-
-// let newArr = arr.filter((val) => {
-//   return val % 2 == 0;
-// });
-
-// console.log("newArr: ", newArr);
-
-// test = async () => {
-//   console.log("1: Message");
-//   console.log("2: Message");
-//   await console.log("3: Message");
-//   console.log("4: Message");
-// };
-
-// test();
-// console.log("5: Message");
+// ----------------------Q16---------------------
 
 // Create a function that takes in two strings as two parameters and returns a boolean that indicates whether
 // or not the first string is an anagram of the second string.
@@ -614,6 +644,13 @@
 // phrase.
 // (Sample Input : function(“pan”,”nap”))
 // (Sample Output : true)
+
+// Anagram
+// Two words or phrases that contain the same letters, but possibly in a different order.
+// Example:
+// "listen" and "silent" → anagram (same letters rearranged)
+// "pan" and "nap" → anagram
+// Key check: sort(str1) === sort(str2)
 
 // function anagram(stringOne, stringTwo) {
 //   let string1 = stringOne.toLowerCase();
@@ -626,20 +663,33 @@
 // }
 // console.log(anagram("nap", "pan"));
 
+// Palindrome
+// A word, phrase, or number that reads the same forwards and backwards.
+// Example:
+// "madam" → same forward and backward → palindrome
+// "racecar" → same forward and backward → palindrome
+// Key check: str === str.split('').reverse().join('')
+
+// function palindrome(string){
+//     return string=== string.split('').reverse().join('');
+// }
+// console.log(palindrome('madam'));
+
+// ----------------------Q17---------------------
+
 // Calculate the sum of numbers received in a comma-delimited string.
 // a. (Sample Input : "1.5, 2.3, 3.1, 4, 5.6, 6, 7, 8, 9, 10.9")
 // b. (Sample Output : 57.1)
 
-// let arr = ["1.5, 2.3, 3.1, 4, 5.6, 6, 7, 8, 9, 10.9"];
+let arr = "1.5, 2.3, 3.1, 4, 5.6, 6, 7, 8, 9, 10.9";
+let arr2 = arr.split(',');
+let sum = 0;
 
-// let sum = 0;
+for (let i = 0; i < arr2.length; i++) {
+  sum = sum + parseFloat(arr2[i]);
+}
 
-// for (let i = 0; i < arr.length; i++) {
-//   sum = sum + arr[i];
-//   return sum;
-// }
-
-// console.log(sum);
+console.log(sum);
 
 // function isPrime(number) {
 //   if (number < 2) return false;
@@ -1023,7 +1073,6 @@
 //       frequency[char] = 1;
 //     }
 //   }
-
 //   return frequency;
 // }
 
@@ -1031,97 +1080,12 @@
 // const str = "banana";
 // console.log(charFrequencyAll(str));
 
-// function charFrequencyAll(str) {
-//   let frequency = {};
+// let arr = ['a','b','c','d'];
+// let arr2 = [1,2,3,4];
 
-//   for (let char of str) {
-//     if (frequency[char]) {
-//       frequency[char]++;
-//     } else {
-//       frequency[char] = 1;
-//     }
-//   }
-
-//   return frequency;
+// let obj = {};
+// for(let i =0; i<arr.length;i++){
+//     obj[arr[i]]=arr2[i];
 // }
 
-// // Example: Find the frequency of all characters in "banana"
-// const str = "banana";
-// console.log(charFrequencyAll(str));
-
-// function charFrequencyAll(str) {
-//   let frequency = {};
-
-//   for (let char of str) {
-//     if (frequency[char]) {
-//       frequency[char]++;
-//     } else {
-//       frequency[char] = 1;
-//     }
-//   }
-
-//   return frequency;
-// }
-
-// // Example: Find the frequency of all characters in "banana"
-// const str = "banana";
-// console.log(charFrequencyAll(str));
-
-// ----------Program to find palindrom-------
-
-// Manual Two-Pointer Approach
-
-// function isPalindrome(str) {
-//   let left = 0;
-//   let right = str.length - 1;
-//   while (left < right) {
-//     if (str[left] !== str[right]) {
-//       return false;
-//     } else {
-//       left++;
-//       right--;
-//     }
-//   }
-//   return true;
-// }
-
-// console.log(isPalindrome("wow"));
-
-// ----------OR-------
-
-// function isPalindrome(str) {
-//   return str === str.split("").reverse().join("");
-// }
-
-// console.log(isPalindrome("madam"));
-
-
-// let arr = [5, 1, 3, 2, 4, 6, 7, 9, 8, 9];
-// let toFind = 51;
-// arr.sort();
-
-// function binarySearch(
-//   arr,
-//   toFind,
-//   startingIndex = 0,
-//   endingIndex = arr.length - 1
-// ) {
-//   if (startingIndex > endingIndex) {
-//     console.log(`"${toFind}" not found!`);
-//     return;
-//   }
-
-//   let midIndex = Math.floor((startingIndex + endingIndex) / 2);
-
-//   if (arr[midIndex] === toFind) {
-//     console.log(`${toFind} found at index ${midIndex}.`);
-//     return;
-//   } else if (arr[midIndex] < toFind) {
-//     binarySearch(arr, toFind, midIndex + 1, endingIndex);
-//   } else {
-//     binarySearch(arr, toFind, startingIndex, midIndex - 1);
-//   }
-// }
-
-// binarySearch(arr, toFind);
-
+// console.log(obj);
