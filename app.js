@@ -1089,3 +1089,29 @@ console.log(sum);
 // }
 
 // console.log(obj);
+
+
+// let arr = [4, 2, 5, 1, 9, 3, 6, 7];
+// let toFind = 3;
+// arr.sort();
+// let flag = false;
+
+// function binarySearch(arr, toFind) {
+//   let startingIndex = 0;
+//   let endingIndex = arr.length - 1;
+//   while (startingIndex <= endingIndex) {
+//     let midIndex = Math.floor((startingIndex + endingIndex) / 2);
+
+//     if (toFind == arr[midIndex]) {
+//       return `Value found at Index: ${midIndex}`;
+//     } else if (arr[midIndex] > toFind) {
+//       endingIndex = midIndex - 1;
+//     } else if (arr[midIndex] < toFind) {
+//       startingIndex = midIndex + 1;
+//     }
+//   }
+
+//   return "Value not found!";
+// }
+
+// console.log(binarySearch(arr, toFind));
