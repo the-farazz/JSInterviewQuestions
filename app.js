@@ -1115,3 +1115,39 @@ console.log(sum);
 // }
 
 // console.log(binarySearch(arr, toFind));
+
+// ---------------Bubble Sorting(Descending Order)--------------------
+
+// let arr = [4, 2, 5, 1, 9, 3, 6, 7];
+
+// function sorting(arr) {
+//   for (let i = 0; i < arr.length - 1; i++) {
+//     for (let j = arr.length - 1; j > 0; j--) {
+//       if (arr[j] > arr[j - 1]) {
+//         [arr[j], arr[j - 1]] = [arr[j - 1], arr[j]];
+//       }
+//     }
+//   }
+//   return arr;
+// }
+
+// console.log("Sorted Array:", sorting(arr));
+
+// --------------Linear Search--------------------// ---------------Bubble Sorting(Descending Order)--------------------
+
+// let arr = [4, 2, 5, 1, 9, 3, 6, 7];
+
+// function sorting(arr) {
+//   for (let i = 0; i < arr.length - 1; i++) {
+//     for (let j = arr.length - 1; j > 0; j--) {
+//       if (arr[j] > arr[j - 1]) {
+//         [arr[j], arr[j - 1]] = [arr[j - 1], arr[j]];
+//       }
+//     }
+//   }
+//   return arr;
+// }
+
+// console.log("Sorted Array:", sorting(arr));
+
+// --------------Linear Search--------------------
