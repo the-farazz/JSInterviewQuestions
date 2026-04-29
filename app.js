@@ -70,6 +70,18 @@
 
 // console.log(`Factorial of a given number is ${result}.`)
 
+// ---------Easy Approach--------------
+
+
+// let num =4;
+
+// for(let i=num-1;i>=1;i--){
+//   num*=i;
+// }
+
+// console.log(`Factorial of a given number is ${num}.`);
+
+
 // ---------Method 2: Recursive Approach--------------
 
 // Recursion is a programming technique where a function calls itself to solve smaller
@@ -1091,27 +1103,147 @@ console.log(sum);
 // console.log(obj);
 
 
-// let arr = [4, 2, 5, 1, 9, 3, 6, 7];
-// let toFind = 3;
-// arr.sort();
-// let flag = false;
+// 1. Find the maximum number in an array
 
-// function binarySearch(arr, toFind) {
-//   let startingIndex = 0;
-//   let endingIndex = arr.length - 1;
-//   while (startingIndex <= endingIndex) {
-//     let midIndex = Math.floor((startingIndex + endingIndex) / 2);
+// let arr = [3, 7, 2, 9, 5];
+// let max = arr[0];
 
-//     if (toFind == arr[midIndex]) {
-//       return `Value found at Index: ${midIndex}`;
-//     } else if (arr[midIndex] > toFind) {
-//       endingIndex = midIndex - 1;
-//     } else if (arr[midIndex] < toFind) {
-//       startingIndex = midIndex + 1;
-//     }
+// for (let i = 1; i < arr.length; i++) {
+//   if (arr[i] > max) {
+//     max = arr[i];
 //   }
-
-//   return "Value not found!";
 // }
 
-// console.log(binarySearch(arr, toFind));
+// console.log("Max:", max);
+
+
+
+// Reverse an array
+
+// let arr = [1, 2, 3, 4, 5];
+// let reversed = [];
+
+// for (let i = arr.length - 1; i >= 0; i--) {
+//   reversed[reversed.length] = arr[i]; }
+
+// console.log(reversed); 
+
+
+// Find duplicates in an array
+
+
+// let arr = [1, 2, 3, 2, 4, 5, 1];
+// let duplicates = [];
+
+// for (let i = 0; i < arr.length; i++) {
+//   for (let j = i + 1; j < arr.length; j++) {
+//     if (arr[i] === arr[j]) {
+//       duplicates[duplicates.length] = arr[i];
+//       break; 
+//     }
+//   }
+// }
+
+// console.log(duplicates); 
+
+// // Remove duplicates from an array
+
+// let arr = [1, 2, 3, 2, 4, 5, 1];
+// let unique = [];
+
+// for (let i = 0; i < arr.length; i++) {
+//   let found = false;
+//   for (let j = 0; j < unique.length; j++) {
+//     if (arr[i] === unique[j]) {
+//       found = true;
+//       break;
+//     }
+//   }
+//   if (!found) {
+//     unique[unique.length] = arr[i];
+//   }
+// }
+
+// console.log(unique); 
+
+// //  Check if an array is sorted (ascending)
+
+//  let arr = [1, 2, 3, 4, 5];
+// let isSorted = true;
+
+// for (let i = 1; i < arr.length; i++) {
+//   if (arr[i] < arr[i - 1]) {
+//     isSorted = false;
+//     break;
+//   }
+// }
+
+// console.log(isSorted); 
+
+// //  Find the second largest number
+
+// let arr = [10, 5, 8, 20, 15];
+// let first = -Infinity;
+// let second = -Infinity;
+
+// for (let i = 0; i < arr.length; i++) {
+//   if (arr[i] > first) {
+//     second = first;
+//     first = arr[i];
+//   } else if (arr[i] > second && arr[i] !== first) {
+//     second = arr[i];
+//   }
+// }
+
+// console.log("Second largest:", second); 
+
+// // Rotate array by 1 (right shift)
+
+// let arr = [1, 2, 3, 4, 5];
+// let last = arr[arr.length - 1];
+
+// for (let i = arr.length - 1; i > 0; i--) {
+//   arr[i] = arr[i - 1];
+// }
+// arr[0] = last;
+
+// console.log(arr); 
+
+// // Count frequency of each element
+
+// let arr = [1, 2, 2, 3, 3, 3];
+// let freq = {};
+
+// for (let i = 0; i < arr.length; i++) {
+//   if (freq[arr[i]] === undefined) {
+//     freq[arr[i]] = 1;
+//   } else {
+//     freq[arr[i]] = freq[arr[i]] + 1;
+//   }
+// }
+
+// console.log(freq); 
+
+// //  Find sum of array elements
+
+// let arr = [1, 2, 3, 4, 5];
+// let sum = 0;
+
+// for (let i = 0; i < arr.length; i++) {
+//   sum = sum + arr[i];
+// }
+
+// console.log(sum);
+
+// //  Find missing number in sequence
+
+// let arr = [1, 2, 3, 5];
+// let n = 5; 
+// let expectedSum = (n * (n + 1)) / 2;
+// let actualSum = 0;
+
+// for (let i = 0; i < arr.length; i++) {
+//   actualSum += arr[i];
+// }
+
+// console.log("Missing:", expectedSum - actualSum); 
